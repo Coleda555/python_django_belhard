@@ -1,0 +1,11 @@
+<form method="post">
+    {% csrf_token %}
+    {{ calculator_form.width }}
+    <br>
+    {{ calculator_form.height }}
+    <br>
+    {{ calculator_form.color }}
+    <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Вычислить</button>
+    {{ result|default_if_none:"" }}
+
+</form>
